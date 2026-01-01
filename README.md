@@ -26,6 +26,6 @@ Project Laravel ini berisi dashboard admin untuk mengelola pemesanan.
 ```bash
 git clone https://github.com/USERNAME/website-hijo.git
 cd website-hijo
-php artisan key:generate
+php artisan migrate
 php artisan migrate:fresh --seed
 composer run dev
