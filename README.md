@@ -1,31 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## **HIJO 4EVER**
 
-# Website Hijo - Admin Dashboard
+</div>
 
-Project Laravel ini berisi dashboard admin untuk mengelola pemesanan.
+<!-- kita akan menggunakan gambar (gambarnya akan saya buatkan dua kolom, jadi satu baris akan ada dua gambar masing-masing kecuali pm akan sendiri diatas) -->
 
-## Requirements
+<!-- masukkan gambar kalian difolder ./member-images -->
 
-- PHP >= 8.1
-- Composer
-- Node.js & NPM
-- MariaDB / MySQL
+<table>
+<!-- untuk project manager -->
+  <tr>
+    <td colspan="2" align="center">
+      <img src="./public/assets/member-images/nadya.png" alt="pm" width="50%">
+      <br>
+      <strong>Nadya Mutia Safira</strong>
+      <br>
+      <em>Project Manager</em>
+    </td>
+  </tr>
+  <!-- tingkatan lead -->
+  <tr>
+    <td align="center">
+      <img src="./public/assets/member-images/romi-image.jpeg" alt="Teks Alt Orang 1" width="100%">
+      <br>
+      <strong>Romi Wahyudi Hasibuan</strong>
+      <br>
+      <em>LeadOps</em>
+    </td>
+    <td align="center">
+      <img src="./public/assets/member-images/hanif.jpeg" alt="Teks Alt Orang 2" width="85%">
+      <br>
+      <strong>Muhammad Shidqi Hanif Firdaus</strong>
+      <br>
+      <em>LeadDev</em>
+    </td>
+  </tr>
 
----
-
-## Setup Project
-
-1. **Clone repository**
-```bash
-git clone https://github.com/USERNAME/website-hijo.git
-cd website-hijo
-php artisan migrate
-php artisan migrate:fresh --seed
-composer run dev
+  <!-- tingkatan dev -->
+   <tr>
+    <td align="center">
+      <img src="./public/assets/member-images/Jiro.jpg" alt="Teks Alt Orang 1" width="100%">
+      <br>
+      <strong>Harun Yahya</strong>
+      <br>
+      <em>LeadDev</em>
+    </td>
+    <td align="center">
+      <img src="./public/assets/member-images/faiz.JPG" alt="Teks Alt Orang 2" width="75%">
+      <br>
+      <strong>M. Hafiz Zalfa Al-Gifari</strong>
+      <br>
+      <em>Security</em>
+    </td>
+  </tr>
+</table>

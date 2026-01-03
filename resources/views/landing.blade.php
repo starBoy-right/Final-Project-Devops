@@ -9,17 +9,17 @@
                 <div class="col-lg-6 d-flex flex-column align-items-center">
                     <div class="hero-content">
                         <h1 class="mb-4">Navigating the digital landscape for success</h1>
-                        <img class="img-fluid d-block d-lg-none" src="{{ asset('assets/images/Illustration.png') }}"
+                        <img class="img-fluid d-block d-lg-none" src="{{ asset('assets/images/services-1.JPEG') }}"
                             alt="">
                         <p class="mb-5">Our digital marketing agency helps businesses grow and succeed online
                             through a range of services including SEO, PPC, social media marketing, and content
                             creation.</p>
-                        <a class="button w-100 d-inline-block text-center d-lg-inline" href="">Book a
+                        <a class="button w-100 d-inline-block text-center d-lg-inline" href="#contact">Book a
                             Consultation</a>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
-                    <img class="img-fluid" src="{{ asset('assets/images/services-1.JPEG') }}" alt="">
+                    <img class="img-float hero-img" src="{{ asset('assets/images/services-1.JPEG') }}" alt="">
                 </div>
             </div>
         </div>
@@ -73,17 +73,17 @@
 
     <section class="services" id="services">
         <div class="container">
-            <div class="row d-flex flex-nowrap flex-row">
+            <div class="row">
                 <div class="heading d-block text-center text-lg-start d-lg-flex align-items-lg-center mb-5">
                     <h2 class="mb-0 d-inline-block mb-4 mb-lg-0">Services</h2>
-                    <p class="ps-4 mb-0">
+                    <p class="ps-lg-4 ps-0 mb-0">
                         At our digital marketing agency, we offer a range of services to <br> help businesses grow
                         and succeed online. These services include:</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="services-card services-card-one d-none d-lg-block">
+                    <div class="pelayanan-card pelayanan-card-one ">
                         <div class="row">
                             <div class="col-lg-6 d-flex flex-column justify-content-between">
                                 <h2>Portal Inspirasi & Pencarian Travel</h2>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="services-card services-card-two d-none d-lg-block">
+                    <div class="pelayanan-card pelayanan-card-two ">
                         <div class="row">
                             <div class="col-lg-6 d-flex flex-column justify-content-between">
                                 <h2>Landing Page Jasa Taman & Landscape</h2>
@@ -111,10 +111,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="services-card services-card-three d-none d-lg-block">
+                    <div class="pelayanan-card pelayanan-card-three ">
                         <div class="row">
                             <div class="col-lg-6 d-flex flex-column justify-content-between">
-                                <h2 class="text-three">BaliDream Gateway</h2>
+                                <h2>BaliDream Gateway</h2>
                                 <a href="#" class="d-flex text-decoration-none">
                                 </a>
                             </div>
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="services-card services-card-four d-none d-lg-block">
+                    <div class="pelayanan-card pelayanan-card-four ">
                         <div class="row">
                             <div class="col-lg-6 d-flex flex-column justify-content-between">
                                 <h2>Website Wisata Budaya & Eksplorasi Indonesia</h2>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="services-card services-card-five d-none d-lg-block">
+                    <div class="pelayanan-card pelayanan-card-five ">
                         <div class="row">
                             <div class="col-lg-6 d-flex flex-column justify-content-between">
                                 <h2>Landing Page Agen Travel Modern & Lengkap</h2>
@@ -153,10 +153,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="services-card services-card-six d-none d-lg-block">
+                    <div class="pelayanan-card pelayanan-card-six ">
                         <div class="row">
                             <div class="col-lg-6 d-flex flex-column justify-content-between">
-                                <h2 class="text-six">SignFlow Seamless</h2>
+                                <h2>SignFlow Seamless</h2>
                                 <a href="#" class="d-flex text-decoration-none">
                                 </a>
                             </div>
@@ -167,12 +167,12 @@
                     </div>
                 </div>
             </div>
-            <div class="services-card services-card-one border-0 d-block d-lg-none p-5 mt-5">
+            <div class="proposal-banner border-0 p-5 mt-5">
                 <h2>Let’s make things happen</h2>
                 <p>Contact us today to learn more about how our digital marketing services can help your business
                     grow and succeed online.</p>
                 <a class="bg-dark text-white w-100 d-inline-block py-3 rounded-4 text-center text-decoration-none"
-                    href="">Get your proposal</a>
+                    href="#services">Get your proposal</a>
             </div>
         </div>
     </section>
@@ -433,7 +433,7 @@ Sangat cocok untuk blog traveler, direktori wisata, atau platform yang hidup dar
             <div class="row">
                 <div class="row d-flex flex-nowrap flex-row">
                     <div class="heading d-block text-center text-lg-start d-lg-flex align-items-lg-center mb-5">
-                        <h2 class="mb-0 d-inline-block mb-4 mb-lg-0">Contact Us</h2>
+                        <h2 class="mb-0 d-inline-block mb-4 mb-lg-0" id="contact">Contact Us</h2>
                         <p class="ps-4 mb-0">Hubungi tim kami untuk <br> memberikan informasi lebih lanjut serta
                             panduan pendaftaran.</p>
                     </div>

@@ -40,7 +40,7 @@ html {
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 110px;
     font-family: SpaceGrotesk;
     background-color: white;
     margin: 0;
@@ -207,16 +207,17 @@ body {
 
 @media only screen and (max-width: 1052px) {
     #mobile-menu {
-        background-color: var(--primary-color);
-        width: 100%;
-        height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        z-index: 9999; /* Lapisan paling atas */
         display: none;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         transition: transform 0.3s ease;
         transform: translateX(-100%);
     }
@@ -299,6 +300,11 @@ body {
         display: none;
     }
 
+    .no-scroll {
+    overflow: hidden !important;
+    height: 100vh;
+}
+
     #hamburger-cross {
         display: block;
         color: var(--secondary-color);
@@ -354,9 +360,9 @@ body {
 }
 
 
-.services .services-card.services-card-one, .services .services-card.services-card-two, 
-.services .services-card.services-card-three, .services .services-card.services-card-four,
-.services .services-card.services-card-five, .services .services-card.services-card-six {
+.services .pelayanan-card.pelayanan-card-one, .services .pelayanan-card.pelayanan-card-two, 
+.services .pelayanan-card.pelayanan-card-three, .services .pelayanan-card.pelayanan-card-four,
+.services .pelayanan-card.pelayanan-card-five, .services .pelayanan-card.pelayanan-card-six {
     background-color: var(--body-color);
     border: 1px solid var(--secondary-color);
     border-bottom: 3px solid var(--secondary-color);
@@ -364,6 +370,85 @@ body {
     padding: 25px;
 }
 
+.pelayanan-card {
+    background-color: #ffffff;
+    border: 2px solid #1a1a1a;
+    border-radius: 24px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 6px 6px 0px #d9d9d9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* PERBAIKAN UTAMA: */
+    display: flex;             /* Membuat isi kiri-kanan */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;               /* Ikut lebar kolom Bootstrap */
+    min-height: 200px;         /* Tinggi minimal agar seragam */
+    margin-bottom: 20px;
+}
+
+.pelayanan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px #c7c7c7;
+}
+
+.white-card { background-color: #ffffff; }
+.green-card { background-color: #b9ff66; }
+.black-card { background-color: #1a1a1a; color: white; }
+
+/* Pengaturan Teks di Kiri */
+.card-left {
+    flex: 1;                   /* Mengambil ruang teks */
+    padding-right: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Pengaturan Gambar di Kanan */
+.card-right {
+    flex: 0 0 150px;           /* Lebar area gambar tetap 150px */
+    display: flex;
+    justify-content: center;
+}
+
+.card-right img {
+    max-width: 100%;           /* Gambar tidak akan keluar dari kotak */
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- RESPONSIVE (PENTING) --- */
+@media (max-width: 768px) {
+    .pelayanan-card {
+        flex-direction: column; /* Gambar pindah ke bawah teks di HP */
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .card-right {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .hero-content h1 {
+        font-size: 36px; /* Mengecilkan teks judul di HP agar tidak meluber */
+    }
+}
+
+.proposal-banner {
+    background-color: var(--body-color);
+    border-radius: 25px;
+    text-align: center;
+}
 .case-studies-section {
     max-width: 1200px;
     margin: 60px auto 0 auto; 
@@ -480,12 +565,12 @@ body {
     padding: 7px;
 }
 
-.services .services-card.services-card-two, .services .services-card.services-card-five {
+.services .pelayanan-card.services-card-two, .services .pelayanan-card.services-card-five {
     background-color: var(--primary-color);
     /* padding: 34px 25px; */
 }
 
-.services .services-card.services-card-three, .services .services-card.services-card-six{
+.services .pelayanan-card.services-card-three, .services .pelayanan-card.services-card-six{
     background-color: var(--secondary-color);
     margin-top: 20px;
     /* padding: 34px 25px; */
@@ -495,12 +580,12 @@ body {
     color: var(--body-color);
 }
 
-.services .services-card.services-card-four, .services .services-card.services-card-five, .services .services-card.services-card-six {
+.services .pelayanan-card.services-card-four, .services .pelayanan-card.services-card-five, .services .pelayanan-card.services-card-six {
     margin-top: 20px;
     /* padding: 34px 25px; */
 }
 
-.services .services-card a i{
+.services .pelayanan-card a i{
     color: var(--primary-color);
     background-color: var(--secondary-color);
     width: 30px;
@@ -513,23 +598,51 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.services .services-card:hover a i {
+.services .pelayanan-card:hover a i {
     rotate: -30deg;
 }
 
-.services-card img {
-    width: 100%;
+.services .pelayanan-card img {
+    width: auto;
     height: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .pelayanan-card {
+        
+        flex-direction: column-reverse;
+        padding: 30px 20px;
+    }
+
+    .pelayanan-card .card-right {
+        width: 100%;
+        margin-bottom: 20px; /* Beri jarak antara gambar dan teks di bawahnya */
+    }
+
+    .pelayanan-card .card-right img {
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Tengahkan gambar */
+    }
+}
+
+.hero-img {
+    width: 600px;
+    height: auto;
+    /* object-fit: cover;  Gambar akan terpotong otomatis agar memenuhi kotak 300x300 tanpa gepeng */
 }
 
 @media only screen and (max-width: 1000px) {
-    .services-card img {
+    .pelayanan-card img {
         width: 150px;
         height: 150px;
     }
 }
 
-.services .services-card a {
+.services .pelayanan-card a {
     align-items: center;
     color: var(--secondary-color);
 }
@@ -873,4 +986,20 @@ footer .subscription input[type='submit'] {
 
 footer .footer-info {
     border-bottom: 2px solid var(--body-color);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.img-float {
+    animation: float 4s ease-in-out infinite;
 }
