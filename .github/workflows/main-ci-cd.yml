@@ -2,7 +2,7 @@ name: CI/CD Pipeline Hijo website
 
 on:
     push:
-        branches: ["main"]
+        branches: ["main", "**"]
 
 jobs:
     # testing sebelum masuk ke branch main
