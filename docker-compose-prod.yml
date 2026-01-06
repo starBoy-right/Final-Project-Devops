@@ -1,0 +1,54 @@
+services:
+  # 1. Service Aplikasi (Laravel)
+  app:
+    image: romiwahyudi/hijo-app:latest
+    container_name: laravel_app
+    restart: always
+    env_file: .env
+    networks:
+      - laravel-net
+    volumes:
+      - static_assets:/var/www/public
+
+  # 2. Service Web Server (Nginx)
+  web:
+    image: nginx:alpine
+    container_name: laravel_web
+    restart: unless-stopped
+    ports:
+      - "80:80" 
+    volumes:
+      - static_assets:/var/www/public
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app 
+    networks:
+      - laravel-net
+      - global-net
+
+  # 3. Service Database (MySQL)
+  db:
+    image: mysql:8.0
+    container_name: laravel_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE} 
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - dbdata:/var/lib/mysql 
+    networks:
+      - laravel-net
+
+
+networks:
+  laravel-net:
+    driver: bridge
+  global-net:
+    external: true
+
+volumes:
+  dbdata:
+    driver: local
