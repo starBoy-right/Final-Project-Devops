@@ -333,7 +333,7 @@ Sangat cocok untuk blog traveler, direktori wisata, atau platform yang hidup dar
                             class="profile-pic">
                     </div>
                     <div class="profile-info">
-                        <h3 class="member-name">Romi Wahyudi H.</h3>
+                        <h3 class="member-name">Romi Wahyudi Hasibuan</h3>
                         <p class="member-role">Lead Ops</p>
                     </div>
                 </div>
