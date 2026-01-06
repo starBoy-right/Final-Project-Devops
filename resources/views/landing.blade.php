@@ -340,7 +340,7 @@ Sangat cocok untuk blog traveler, direktori wisata, atau platform yang hidup dar
                 <hr class="card-divider">
                 <div class="card-body">
                     <p class="member-description">
-                        7+ years of experience in project management and team leadership. Strong organizational and
+                        8+ years of experience in project management and team leadership. Strong organizational and
                         communication skills.
                     </p>
                 </div>

@@ -26,7 +26,7 @@
 
             <div class="col-lg-4 px-lg-5">
                 <h5 class="fw-bold mb-4" style="background-color: #adff2f; color: black; display: inline-block; padding: 2px 10px; border-radius: 5px;">Contact Us:</h5>
-                <p class="mb-2">Email: <a href="mailto:info@hijo.com" class="text-white text-decoration-none">info@hijo.com</a></p>
+                <p class="mb-2">Email: <a href="mailto:info@hijo.com" class="text-white text-decoration-none">info@hijo.web.id</a></p>
                 <p class="mb-2">Phone: <a href="tel:6285719209180" class="text-white text-decoration-none">+62 857-1920-9180</a></p>
                 <p class="text-secondary">
                     Jl. Lenteng Agung Raya No. 20 <br>
