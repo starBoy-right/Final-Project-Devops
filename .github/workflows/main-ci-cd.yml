@@ -69,8 +69,8 @@ jobs:
                 script: | 
                     cd ~/Final-Project-Devops
                     git pull origin main
-                    docker-compose -f docker-compose-prod.yml pull
-                    docker-compose -f docker-compose-prod.yml up -d
+                    docker compose -f docker-compose-prod.yml pull
+                    docker compose -f docker-compose-prod.yml up -d
                     docker system prune -f
 
 
