@@ -14,7 +14,7 @@ services:
     container_name: laravel_web
     restart: unless-stopped
     ports:
-      - "8000:80" # Akses di browser via localhost:8000
+      - "8000:80" 
     volumes:
       - ./:/var/www # Nginx butuh akses ke file public
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
@@ -29,7 +29,7 @@ services:
     container_name: laravel_db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE:-laravel} # Mengambil dari .env atau default 'laravel'
+      MYSQL_DATABASE: ${DB_DATABASE:-laravel} 
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
       MYSQL_PASSWORD: ${DB_PASSWORD:-root}
       MYSQL_USER: ${DB_USERNAME:-laravel}
@@ -39,8 +39,7 @@ services:
     networks:
       - laravel-net
 
-  # 4. Service Node (Opsional: Untuk Vite/Tailwind)
-  # Gunakan ini untuk menjalankan 'npm run dev' di dalam docker
+
   node:
     image: node:18-alpine
     container_name: laravel_node
