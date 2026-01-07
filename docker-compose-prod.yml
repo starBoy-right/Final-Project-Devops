@@ -52,3 +52,5 @@ networks:
 volumes:
   dbdata:
     driver: local
+  static_assests:
+    driver: local
