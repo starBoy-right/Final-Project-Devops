@@ -1,0 +1,36 @@
+---
+- name: Hijo Server Maintenance
+  hosts: webserverhijo
+  become: yes  
+  vars:
+
+  tasks:
+    
+    - name: 1. Cek Sisa Disk 
+      shell: df -h / | tail -1 | awk '{print $4}'
+      register: disk_before
+      changed_when: false
+
+
+    - name: 2. Update Repository (apt update)
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600 
+
+    - name: 3. Hapus Dependency Sampah (apt autoremove)
+      apt:
+        autoremove: yes
+        autoclean: yes
+
+    - name: 4. Cek Sisa Disk (Setelah Bersih-bersih)
+      shell: df -h / | tail -1 | awk '{print $4}'
+      register: disk_after
+      changed_when: false
+
+    - name: 5. --- LAPORAN HASIL MAINTENANCE ---
+      debug:
+        msg:
+          - "=========================================="
+          - "Disk Awal   : {{ disk_before.stdout }}"
+          - "Disk Akhir  : {{ disk_after.stdout }}"
+          - "=========================================="
