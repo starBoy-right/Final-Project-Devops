@@ -16,11 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-        User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'password' => Hash::make('12345678'),
-        ]);
+        // seeder kita kosongkan yah, karena admin akan dibuat sekali saja lewat /Console/Command/CreateSuperAdmin.php
     }
 }
