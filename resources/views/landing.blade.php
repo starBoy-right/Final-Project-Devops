@@ -14,8 +14,7 @@
                         <p class="mb-5">Our digital marketing agency helps businesses grow and succeed online
                             through a range of services including SEO, PPC, social media marketing, and content
                             creation.</p>
-                        <a class="button w-100 d-inline-block text-center d-lg-inline" href="#contact">Book a
-                            Consultation</a>
+                        <a class="button w-100 d-inline-block text-center d-lg-inline" href="#contact">Pesan disini</a>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
